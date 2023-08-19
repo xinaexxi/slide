@@ -1,0 +1,146 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* { margin: 0; padding: 0; }
+ul, li, ol, li, dl { list-style: none; text-decoration: none;}
+a { text-decoration: none; color: inherit; cursor: pointer;}
+button { background-color: transparent ;border: none; cursor: pointer;}
+:root {
+    --main-color: rgb(179, 179, 179);
+    --sub-color: rgb(251, 255, 0);
+    --point-color1: rgb(40, 43, 198);
+    --point-color2: rgb(67, 133, 100);
+}
+
+main .slide.active {
+    display: block;
+}
+
+
+body {
+    font-family: 'SUITE-Regular' ;
+}
+
+#container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+
+nav {
+    background-color:  var(--main-color);
+    margin: 50px auto;
+    width: 900px;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    display: block;
+    padding: 3px 20px;
+    margin: 0 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+main {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+main .slide {
+    display: none;
+    border: 1px solid var(--point-color1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 500px;
+}
+main .wrap {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+main .moveController {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    height: 50px;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #000;
+    z-index: 100;
+}
+main .moveController button {
+    width: 40px;
+    height: 100%;
+    color: #fff;
+    background-color: #ffffff92;
+}
+
+
+main .wrap .slideWrapper {
+    width: 500%;
+    height: 100%;
+    margin-left: 0%;
+}
+main .wrap .slideWrapper .slideImg {
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-color: red;
+}
+main #slideA .wrap .slideWrapper .slideImg:nth-child(2) {background-color:orange;}
+main #slideA .wrap .slideWrapper .slideImg:nth-child(3) {background-color:yellow;}
+main #slideA .wrap .slideWrapper .slideImg:nth-child(4) {background-color: green}
+main #slideA .wrap .slideWrapper .slideImg:nth-child(5) {background-color: blue}
+
+
+
+/* slideB */
+main #slideB .wrap { position: relative; }
+main #slideB .wrap .speedControl  {
+    position: absolute;  
+    margin-top: 10px;
+    width: 40%;
+    height: 40px;
+    left: 30%;
+    z-index: 100;
+}
+main #slideB .wrap .speedControl ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+main #slideB .wrap .speedControl ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    color: #fff;
+}
+main #slideB .wrap .speedControl ul li.on {
+    background-color: #ffffff70;
+}
+main #slideB .wrap .slideWrapper  { transition: 0.5s; }
+main #slideB .wrap .slideWrapper .slideImg {
+    background-color:black; 
+    color: #fff; 
+    transition: 0.5s;
+}

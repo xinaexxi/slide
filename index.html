@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="container">
+        <nav id="navBar">
+            <ul>
+                <li class="slideA">Slide A</li>
+                <li class="slideB">Slide B</li>
+                <li class="slideC">Slide C</li>
+            </ul>
+        </nav>
+
+        <main id="content">
+            <!-- left right btn -->
+            <div class="moveController">
+                <button class="left">왼쪽</button>
+                <button class="right">오른쪽</button>
+            </div>
+            
+            <!-- slideA -->
+            <div id="slideA" class="slide active">
+                <div class="wrap">
+                    <div class="slideWrapper">
+                        <div class="slideImg"></div>
+                        <div class="slideImg"></div>
+                        <div class="slideImg"></div>
+                        <div class="slideImg"></div>
+                        <div class="slideImg"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- slideB -->
+            <div id="slideB" class="slide">
+                <div class="wrap">
+                    <div class="speedControl">
+                        <ul>
+                            <li id="slow">slow</li>
+                            <li id="medium" class="on">medium</li>
+                            <li id="fast">fast</li>
+                        </ul>
+                    </div>
+                    <div class="slideWrapper">
+                        <div class="slideImg">1</div>
+                        <div class="slideImg">2</div>
+                        <div class="slideImg">3</div>
+                        <div class="slideImg">4</div>
+                        <div class="slideImg">5</div>
+                        <div class="slideImg">1</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="slideC" class="slide"></div>
+        </main>
+    </div>
+
+
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
